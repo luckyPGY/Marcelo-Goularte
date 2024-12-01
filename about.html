@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="Assets/favicon.ico" type="image/x-icon">
+    <style>
+.tab{
+    text-decoration: none;
+    background-color: rgb(85, 85, 85);
+    color: white;
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    text-decoration-color: rgb(68, 68, 68);
+}
+.tab:hover{
+    background-color: rgb(40, 40, 40);
+    color: white;
+    text-decoration-color: rgb(40, 40, 40);
+}
+nav{
+    display: flex;
+    justify-content: flex-start;
+    position: fixed;
+}
+body{
+    background-image: linear-gradient(black, rgb(40, 40, 40), rgb(68, 68, 68));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration: none;
+}
+footer{
+    background-color: grey;
+    position: absolute;
+    top: 250%;
+    height: 125px;
+    margin: 0%;
+    width: 99%;
+    text-align: center;
+}
+#titletxt{
+    font: bold;
+    color: goldenrod;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 56px;
+    transition: 1s;
+}
+#about1{
+    position: absolute;
+    right: 25%;
+    top: 35%;
+    border: 15px goldenrod solid;
+    color: goldenrod;
+    padding: 15px;
+    width: 500px;
+    transition: 1s;
+    height: 1250px;
+}
+#about1:hover{
+    color: gold;
+    border-color: gold;
+    transition: 1s;
+}
+#titletxt:hover{
+    color: gold;
+    transition: 1s;
+}
+#img{
+    position: absolute;
+    right: 15px;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><img src="Assets/favicon.ico" height="70"></li>
+            <a href="index.html"><li class="tab">Home</li></a>
+            <a href="about.html"><li class="tab">Sobre</li></a>
+            <a href="contact.html"><li class="tab">Contato</li></a>
+        </ul>
+    </nav>
+    <img src="Assets/daddyshark.jpg" id="img" width="240" height="480">
+    <div id="about1">
+    <!--<h1 id="titletxt">Sobre nós</h1>-->
+    <br><br><h3>Marcelo Goularte Da Silva Frezzatti, é um advogado que iniciou sua carreira em 2022.</h3>
+    <h3>é um advogado muito bom, vindo da cidade de Itapeva.</h3>
+    <h3>Trabalha pela <abbr title="Ordem Dos Advogados Do Brasil">OAB</abbr></h3>
+    </div>
+    <footer><br><br><br>2024 © Marcelo Goularte Advocacia 127.0.0.1:5500</footer>
+</body>
+</html>
+<!-- Código feito por Pedro Goularte -->
