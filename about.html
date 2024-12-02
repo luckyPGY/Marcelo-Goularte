@@ -28,6 +28,7 @@ nav{
     display: flex;
     justify-content: flex-start;
     position: fixed;
+    z-index: 2;
 }
 body{
     background-image: url(Assets/ground.jpg) /*linear-gradient(black, rgb(40, 40, 40), rgb(68, 68, 68))*/;
@@ -66,7 +67,7 @@ footer{
     width: 1000px;
     transition: 1s;
     height: 1250px;
-    
+    z-index: 1;
 }
 #about1:hover{
     color: gold;
@@ -114,7 +115,8 @@ footer{
     <img src="Assets/daddyshark.jpg" id="img" width="240" height="480">
     <div id="about1">
     <!--<h1 id="titletxt">Sobre nós</h1>-->
-    <br><br><h3 class="text">Marcelo Goularte Da Silva Frezzatti, é um advogado que iniciou sua carreira em 2022.</h3>
+    <h1 class="text">Sobre Nós</h1>
+    <h3 class="text">Marcelo Goularte Da Silva Frezzatti, é um advogado que iniciou sua carreira em 2022.</h3>
     <h3 class="text">é um advogado muito bom, vindo da cidade de Itapeva.</h3>
     <h3 class="text">Trabalha pela <abbr title="Ordem Dos Advogados Do Brasil">OAB</abbr></h3>
     <h3 class="text">No Escritório de Advocacia Marcelo Goularte, temos como missão oferecer soluções jurídicas personalizadas e eficientes, atendendo às necessidades dos nossos clientes com excelência, ética e transparência.</h3><br><br>
@@ -128,13 +130,36 @@ footer{
                 <h3 class="texty">ações de reparação de danos</h3>
                 <h3 class="texty">e mais.</h3>
             </div></p>
-           <p><div class="marqdiv">
+            <p><div class="marqdiv">
                 <h1 class="texty">Direito de Família</h1>
                 <h3 class="texty"> divórcios,</h3>
                 <h3 class="texty"> guarda de filhos,</h3>
                 <h3 class="texty">pensão alimentícia e inventários.</h3>
-            </div></div></p>
-        </div>     
+            </div></p>
+            <p><div class="marqdiv">
+                <h1 class="texty">Direito Trabalhista</h1>
+                <h3 class="texty"> defesa de empresas e</h3>
+                <h3 class="texty"> trabalhadores em questões</h3>
+                <h3 class="texty">de relações laborais.</h3>
+            </div></p>
+        <p><div class="marqdiv">
+            <h1 class="texty">Direito Empresarial</h1>
+            <h3 class="texty"> constituição de empresas,</h3>
+            <h3 class="texty"> recuperação judicial</h3>
+            <h3 class="texty">e orientação estratégica.</h3>
+        </div></p>
+        <p><div class="marqdiv">
+            <h1 class="texty">Direito Penal</h1>
+            <h3 class="texty"> acompanhamento e defesa</h3>
+            <h3 class="texty"> em processos criminais</h3>
+        </div></p>
+        <p><div class="marqdiv">
+            <h1 class="texty">Direito Imobiliário</h1>
+            <h3 class="texty"> analize e elaboração</h3>
+            <h3 class="texty"> de contratos de compra e venda</h3>
+            <h3 class="texty">, locações e regularizações</h3>
+        </div></p>
+    </div>      
     </marquee>
     </div>
     <footer><br><br><br>2024 © Marcelo Goularte Advocacia 127.0.0.1:5500</footer>
