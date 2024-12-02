@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatar</title>
+    <link rel="shortcut icon" href="Assets/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <style>
+    .tab{
+        text-decoration: none;
+        background-color: rgb(85, 85, 85);
+        color: white;
+        width: 100px;
+        height: 50px;
+        padding: 10px;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: larger;
+        text-decoration-color: rgb(68, 68, 68);
+    }
+    .tab:hover{
+        background-color: rgb(40, 40, 40);
+        color: white;
+        text-decoration-color: rgb(40, 40, 40);
+    }
+    nav{
+        display: flex;
+        justify-content: flex-start;
+    }
+    body{
+        background-image: url(Assets/ground.jpg)/*linear-gradient(black, rgb(40, 40, 40), rgb(68, 68, 68))*/;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-evenly;
+        text-decoration: none;
+    }
+    form{
+        background-color: rgb(40, 40, 40);
+        color: gold;
+        padding: 15px;
+        border: gold 10px solid;
+        border-radius: 15px;
+        width: 520px;
+        position: absolute;
+        top: 20%;
+        right: 35%;
+        font-family: system-ui, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        animation-name: move;
+        animation-duration: 1s;
+        transition: 1s;
+    }
+    form:hover{
+        color: rgb(255, 153, 0);
+        border: rgb(255, 153, 0) 10px solid;
+        transition: 1s;
+    }
+    input{
+        color: black;
+    }
+    #int4{
+        height: 100px
+    }
+    @keyframes move{
+    0%{
+        position: absolute;
+        top: 100%;
+        right: 35%; 
+    }
+    100%{
+        position: absolute;
+        top: 20%;
+        right: 35%;
+        position: absolute;
+    }
+}
+@keyframes colours{
+    0%{
+        color: gold;
+        border: gold 10px solid;
+    }
+    100%{
+        color: goldenrod;
+        border: goldenrod 10px solid;
+    }
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><img src="Assets/favicon.ico" height="70"></li>
+            <a href="index.html"><li class="tab">Home</li></a>
+            <a href="about.html"><li class="tab">Sobre</li></a>
+            <a href="contact.htm"><li class="tab">Contato</li></a>
+        </ul>
+    </nav>
+    <form id="form">
+        <h1>Enviar mensagem</h1>
+        <label id="lab2" for="int2">Nome Completo:</label>
+        <input id="int2" type="tel" required><br><br>
+
+        <label id="lab1" for="int1">Telefone:</label>
+        <input id="int1" type="tel"><br><br>
+
+        <label id="lab3" for="int3">Assunto:</label>
+        <input id="int3" type="text"><br><br>
+
+        <label id="lab4" for="int4">Mensagem:</label>
+        <input id="int4" type="text" required><br><br>
+
+        <button type="submit" id="Submitter">Enviar</button>
+    </form>
+    <script>
+        (function() {
+            emailjs.init({
+                publicKey: "MHpTYtLYPMxWfJN88",
+            });
+        })();
+
+        document.getElementById('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            emailjs.send("service_k6yc946", "template_k54w9qm", {
+                to_name: "Marcelo",
+                from_name: document.getElementById('int2').value,
+                to_email: "pedrogoularte@hotmail.com",
+                message: document.getElementById('int4').value,
+                tel: document.getElementById('int1').value,
+                subject: document.getElementById('int3').value,
+            })
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+            }, function(error) {
+                console.log('FAILED...', error);
+            });
+        });
+    </script>
+</body>
+</html>
+<!-- Código feito por Pedro Goularte -->
