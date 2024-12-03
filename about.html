@@ -97,11 +97,17 @@ footer{
 .texty{
    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
    color: gold;
+   font-size: 1.25vw;
+}
+.textyh1{
+    font-size: 2.5vw;
+    color: gold;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .marqdiv{
-    height: 300px;
-    width: 300px;
-    border: gold 10px solid;
+    height: 20vw;
+    width: 30vw;
+    border: gold 2vw solid;
     border-radius: 15px;
     padding: 10px;
 }
@@ -133,36 +139,36 @@ footer{
     <marquee behavior="scroll" direction="left" class="marq" id="marq" scrollamount="5"  onmouseenter="this.stop()" onmouseleave="this.start()">
         <div id="marqy">
             <p><div class="marqdiv">
-                <h1 class="texty">Direito Civil</h1>
+                <h1 class="textyh1">Direito Civil</h1>
                 <h3 class="texty">contratos, responsabilidades,</h3>
                 <h3 class="texty">ações de reparação de danos</h3>
                 <h3 class="texty">e mais.</h3>
             </div></p>
             <p><div class="marqdiv">
-                <h1 class="texty">Direito de Família</h1>
+                <h1 class="textyh1">Direito de Família</h1>
                 <h3 class="texty"> divórcios,</h3>
                 <h3 class="texty"> guarda de filhos,</h3>
                 <h3 class="texty">pensão alimentícia e inventários.</h3>
             </div></p>
             <p><div class="marqdiv">
-                <h1 class="texty">Direito Trabalhista</h1>
+                <h1 class="textyh1">Direito Trabalhista</h1>
                 <h3 class="texty"> defesa de empresas e</h3>
                 <h3 class="texty"> trabalhadores em questões</h3>
                 <h3 class="texty">de relações laborais.</h3>
             </div></p>
         <p><div class="marqdiv">
-            <h1 class="texty">Direito Empresarial</h1>
+            <h1 class="textyh1">Direito Empresarial</h1>
             <h3 class="texty"> constituição de empresas,</h3>
             <h3 class="texty"> recuperação judicial</h3>
             <h3 class="texty">e orientação estratégica.</h3>
         </div></p>
         <p><div class="marqdiv">
-            <h1 class="texty">Direito Penal</h1>
+            <h1 class="textyh1">Direito Penal</h1>
             <h3 class="texty"> acompanhamento e defesa</h3>
             <h3 class="texty"> em processos criminais</h3>
         </div></p>
         <p><div class="marqdiv">
-            <h1 class="texty">Direito Imobiliário</h1>
+            <h1 class="textyh1">Direito Imobiliário</h1>
             <h3 class="texty"> analize e elaboração</h3>
             <h3 class="texty"> de contratos de compra e venda</h3>
             <h3 class="texty">, locações e regularizações</h3>
@@ -185,8 +191,8 @@ footer{
             const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
             if (isMobile) {
-                element.style.top = '150px';
-                element.style.right = '40px';
+                element.style.top = '100px';
+                element.style.right = '100px';
             } else {
                 element.style.top = '250px';
                 element.style.right = '10px';
