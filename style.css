@@ -2,8 +2,8 @@
     text-decoration: none;
     background-color: rgb(85, 85, 85);
     color: white;
-    width: 100px;
-    height: 50px;
+    width: 6vw;
+    height: 3vw;
     padding: 10px;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
@@ -21,6 +21,7 @@ body{
     background-image: url(Assets/ground.jpg) /*linear-gradient(black, rgb(40, 40, 40), rgb(68, 68, 68))*/;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
 }
 ul{
     list-style-type: none;
@@ -29,9 +30,10 @@ ul{
     display: flex;
     justify-content: space-evenly;
     text-decoration: none;
+    font-size: 1.25vw;
 }
 #titletxt{
-    font-size: 72px;
+    font-size: 6vw;
     font: bold;
 }
 #titlescreen{
@@ -49,8 +51,11 @@ footer{
     top: 100%;
     height: 125px;
     margin: 0%;
-    width: 99%;
+    width: 100vw;
     text-align: center;
+}
+.tit{
+    font-size: 3vw;
 }
 @keyframes move{
     0%{
@@ -62,8 +67,8 @@ footer{
     100%{
         position: absolute;
         top: 25%;
-        right: 25%;
+        right: 15%;
         position: absolute;
-        font-size: 56px;
+        font-size: 72px;
     }
 }

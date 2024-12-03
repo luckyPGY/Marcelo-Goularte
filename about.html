@@ -11,8 +11,8 @@
     text-decoration: none;
     background-color: rgb(85, 85, 85);
     color: white;
-    width: 100px;
-    height: 50px;
+    width: 6vw;
+    height: 3vw;
     padding: 10px;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
@@ -34,6 +34,7 @@ body{
     background-image: url(Assets/ground.jpg) /*linear-gradient(black, rgb(40, 40, 40), rgb(68, 68, 68))*/;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
 }
 ul{
     list-style-type: none;
@@ -42,6 +43,7 @@ ul{
     display: flex;
     justify-content: space-evenly;
     text-decoration: none;
+    font-size: 1.25vw;
 }
 footer{
     background-color: grey;
@@ -49,7 +51,7 @@ footer{
     top: 250%;
     height: 125px;
     margin: 0%;
-    width: 99%;
+    width: 100vw;
     text-align: center;
 }
 #titletxt{
@@ -82,13 +84,19 @@ footer{
     position: absolute;
     right: 15px;
     top: 250px;
+    width: 20vw;
 }
 .text{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.25vw;
+}
+.texth1{
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2.5vw;
 }
 .texty{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: gold;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   color: gold;
 }
 .marqdiv{
     height: 300px;
@@ -106,21 +114,21 @@ footer{
 <body>
     <nav>
         <ul>
-            <li><img src="Assets/favicon.ico" height="70"></li>
+            <li><img src="Assets/favicon.ico" height="64vw"></li>
             <a href="index.html"><li class="tab">Home</li></a>
             <a href="about.html"><li class="tab">Sobre</li></a>
             <a href="contact.htm"><li class="tab">Contato</li></a>
         </ul>
     </nav>
-    <img src="Assets/daddyshark.jpg" id="img" width="240" height="480">
+    <img src="Assets/daddyshark.jpg" id="img">
     <div id="about1">
     <!--<h1 id="titletxt">Sobre nós</h1>-->
-    <h1 class="text">Sobre Nós</h1>
+    <h1 class="texth1">Sobre Nós</h1>
     <h3 class="text">Marcelo Goularte Da Silva Frezzatti, é um advogado que iniciou sua carreira em 2022.</h3>
     <h3 class="text">é um advogado muito bom, vindo da cidade de Itapeva.</h3>
     <h3 class="text">Trabalha pela <abbr title="Ordem Dos Advogados Do Brasil">OAB</abbr></h3>
     <h3 class="text">No Escritório de Advocacia Marcelo Goularte, temos como missão oferecer soluções jurídicas personalizadas e eficientes, atendendo às necessidades dos nossos clientes com excelência, ética e transparência.</h3><br><br>
-    <h1 class="text">Nossos Serviços</h1>
+    <h1 class="texth1">Nossos Serviços</h1>
     <h3 class="text">Prestamos serviços de assessoria e consultoria jurídica em diversas áreas do Direito, incluindo:</h3>
     <marquee behavior="scroll" direction="left" class="marq" id="marq" scrollamount="5"  onmouseenter="this.stop()" onmouseleave="this.start()">
         <div id="marqy">
@@ -161,16 +169,33 @@ footer{
         </div></p>
     </div>      
     </marquee>
-    <h1 class="text">Por que escolher nosso escritório?</h1>
+    <h1 class="texth1">Por que escolher nosso escritório?</h1>
     <h3 class="text">Nosso advogado responsável, Marcelo Goularte, possui ampla experiência jurídica, ele tem se destacado pela busca constante por soluções inovadoras e eficazes para cada cliente.</h3>
     <br><h3 class="text">Além disso, Marcelo Goularte investe continuamente em capacitação profissional, participando de congressos, cursos e palestras para se manter atualizado com as constantes mudanças da legislação brasileira.</h3>
-    <br><h1 class="text">Compromisso com nossos clientes</h1>
+    <br><h1 class="texth1">Compromisso com nossos clientes</h1>
     <h3 class="text">Em nosso Escritório de Advocacia, cada cliente é tratado de forma única. Nosso compromisso é oferecer um atendimento humanizado, acessível e proativo, buscando sempre os melhores resultados.</h3>
     <br>
     <h3 class="text">Entre em contato conosco e descubra como podemos ajudá-lo a proteger seus direitos e alcançar seus objetivos. Estamos prontos para atendê-lo!
     </h3>
     </div>
     <footer><br><br><br>2024 © Marcelo Goularte Advocacia 127.0.0.1:5500</footer>
+    <script>
+        function adjustElementPosition() {
+            const element = document.getElementById('img');
+            const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
+            if (isMobile) {
+                element.style.top = '150px';
+                element.style.right = '40px';
+            } else {
+                element.style.top = '250px';
+                element.style.right = '10px';
+                element.style.width = '20vw'
+            }
+        }
+
+        window.onload = adjustElementPosition;
+    </script>
 </body>
 </html>
 <!-- Código feito por Pedro Goularte -->
