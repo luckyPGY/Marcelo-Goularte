@@ -31,15 +31,13 @@ ul{
     text-decoration: none;
 }
 #titletxt{
-    font-size: 56px;
+    font-size: 72px;
     font: bold;
 }
 #titlescreen{
     position: absolute;
     top: 25%;
-    right: 25%;
-    font-size: 56px;
-    font: bold;
+    right: 15%;
     color: goldenrod;
     font-family: system-ui, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     animation-name: move;
