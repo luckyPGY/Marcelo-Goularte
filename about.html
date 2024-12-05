@@ -45,15 +45,6 @@ ul{
     text-decoration: none;
     font-size: 1.25vw;
 }
-footer{
-    background-color: grey;
-    position: absolute;
-    top: 250%;
-    height: 125px;
-    margin: 0%;
-    width: 100vw;
-    text-align: center;
-}
 #titletxt{
     font: bold;
     color: goldenrod;
@@ -88,25 +79,28 @@ footer{
 }
 .text{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.25vw;
+    white-space: pre-line;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    max-width: 50vw;
 }
 .texth1{
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 2.5vw;
 }
 .texty{
    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
    color: gold;
-   font-size: 1.25vw;
+   font-size: 20px;
 }
 .textyh1{
-    font-size: 2.5vw;
     color: gold;
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 36px;
 }
 .marqdiv{
-    height: 20vw;
-    width: 30vw;
+    height: 300px;
+    width: 300px;
     border: gold 2vw solid;
     border-radius: 15px;
     padding: 10px;
@@ -126,7 +120,7 @@ footer{
             <a href="contact.htm"><li class="tab">Contato</li></a>
         </ul>
     </nav>
-    <img src="Assets/daddyshark.jpg" id="img">
+    <img src="Assets/daddyshark.png" id="img">
     <div id="about1">
     <!--<h1 id="titletxt">Sobre nós</h1>-->
     <h1 class="texth1">Sobre Nós</h1>
@@ -184,23 +178,32 @@ footer{
     <h3 class="text">Entre em contato conosco e descubra como podemos ajudá-lo a proteger seus direitos e alcançar seus objetivos. Estamos prontos para atendê-lo!
     </h3>
     </div>
-    <footer><br><br><br>2024 © Marcelo Goularte Advocacia 127.0.0.1:5500</footer>
     <script>
-        function adjustElementPosition() {
-            const element = document.getElementById('img');
-            const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+          const element = document.getElementById('img');
+          const textElements = document.getElementsByClassName('text');
+          const txth1s = document.getElementsByClassName('textyh1');
 
-            if (isMobile) {
-                element.style.top = '100px';
-                element.style.right = '100px';
-            } else {
-                element.style.top = '250px';
-                element.style.right = '10px';
-                element.style.width = '20vw'
+    function adjustElementPosition() {
+        const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+        console.log(isMobile);
+
+        if (isMobile) {
+            element.style.position = 'absolute';
+            element.style.top = '70px';
+            element.style.left = '100px';
+            
+            // Adjust font size for mobile
+            for (let i = 0; i < textElements.length; i++) {
+                textElements[i].style.fontSize = '20px'; // Allow text to wrap
             }
+        } else {
+            element.style.top = '250px';
+            element.style.right = '10px';
+            element.style.width = '20vw';
         }
+    }
 
-        window.onload = adjustElementPosition;
+    window.onload = adjustElementPosition;
     </script>
 </body>
 </html>
