@@ -145,11 +145,12 @@
 
         document.getElementById('form').addEventListener('submit', function(event) {
             event.preventDefault();
+            window.warn('E-mail enviado!');
 
             emailjs.send("service_k6yc946", "template_k54w9qm", {
                 to_name: "Marcelo",
                 from_name: document.getElementById('int2').value,
-                to_email: "pedrogoularte@hotmail.com",
+                to_email: "marcelogoularte@hotmail.com",
                 message: document.getElementById('int4').value,
                 tel: document.getElementById('int1').value,
                 subject: document.getElementById('int3').value,
