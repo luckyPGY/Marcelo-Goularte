@@ -71,7 +71,7 @@
         font-size: 3vw;
     }
     form label{
-        font-size: 1vw;
+        font-size: 25px;
     }
     input{
         color: black;
@@ -82,7 +82,7 @@
         background-color: dodgerblue;
         color: white;
         width: 6vw;
-        height: 3vw;
+        height: 3vw; 
         font-size: 1vw;
         border-style: solid;
     }
@@ -161,6 +161,19 @@
                 console.log('FAILED...', error);
             });
         });
+    </script>
+    <script>
+        function isMobile(){
+            const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+            console.log(isMobile);
+            
+            if(isMobile){
+
+            }
+            else{
+
+            }
+        }
     </script>
 </body>
 </html>
