@@ -1,21 +1,26 @@
 .tab{
-    text-decoration: none;
+    text-decoration: rgb(85, 85, 85);
     background-color: rgb(85, 85, 85);
     color: white;
-    width: 6vw;
-    height: 3vw;
+    width: 85px;
+    height: 55px;
     padding: 10px;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     font-size: larger;
+    transition: 0.25s;
+    display: flex;
+    justify-content: space-evenly;
 }
 .tab:hover{
     background-color: rgb(40, 40, 40);
     color: white;
+    transition: 0.25s;
 }
 nav{
     display: flex;
     justify-content: flex-start;
+    text-decoration: rgb(85, 85, 85);
 }
 body{
     background-image: url(Assets/ground.jpg) /*linear-gradient(black, rgb(40, 40, 40), rgb(68, 68, 68))*/;
@@ -29,21 +34,22 @@ ul{
     margin: 0;
     display: flex;
     justify-content: space-evenly;
-    text-decoration: none;
-    font-size: 1.25vw;
+    text-decoration: rgb(85, 85, 85);
+    font-size: 20px;
 }
 #titletxt{
-    font-size: 6vw;
+    font-size: 5vw;
     font: bold;
 }
 #titlescreen{
     position: absolute;
     top: 25%;
-    right: 15%;
+    transform: translateX(15%);
     color: goldenrod;
-    font-family: system-ui, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Montserrat", system-ui, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     animation-name: move;
     animation-duration: 1s;
+    text-shadow: 0px 5px 20px black;
 }
 footer{
     background-color: grey;
@@ -51,7 +57,7 @@ footer{
     top: 100%;
     height: 125px;
     margin: 0%;
-    width: 100vw;
+    width: 99%;
     text-align: center;
 }
 .tit{
@@ -61,14 +67,13 @@ footer{
     0%{
         position: absolute;
         top: 100%;
-        right: 25%; 
+        left: 0%; 
         font-size: 12px;
     }
     100%{
         position: absolute;
         top: 25%;
-        right: 15%;
-        position: absolute;
+        left: 15%;
         font-size: 72px;
     }
 }

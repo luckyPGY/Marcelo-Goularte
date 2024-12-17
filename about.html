@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,28 +7,33 @@
     <title>Document</title>
     <link rel="shortcut icon" href="Assets/favicon.ico" type="image/x-icon">
     <style>
-.tab{
-    text-decoration: none;
+         @font-face {
+            font-family: 'Segoe UI';
+            src: url("Fonts/Segoe-UI.ttf") format('ttf');
+         }
+         .tab{
+    text-decoration: rgb(85, 85, 85);
     background-color: rgb(85, 85, 85);
     color: white;
-    width: 6vw;
-    height: 3vw;
+    width: 85px;
+    height: 55px;
     padding: 10px;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     font-size: larger;
-    text-decoration-color: rgb(68, 68, 68);
+    transition: 0.25s;
+    display: flex;
+    justify-content: space-evenly;
 }
 .tab:hover{
     background-color: rgb(40, 40, 40);
     color: white;
-    text-decoration-color: rgb(40, 40, 40);
+    transition: 0.25s;
 }
 nav{
     display: flex;
     justify-content: flex-start;
-    position: fixed;
-    z-index: 2;
+    text-decoration: rgb(85, 85, 85);
 }
 body{
     background-image: url(Assets/ground.jpg) /*linear-gradient(black, rgb(40, 40, 40), rgb(68, 68, 68))*/;
@@ -42,79 +47,88 @@ ul{
     margin: 0;
     display: flex;
     justify-content: space-evenly;
-    text-decoration: none;
-    font-size: 1.25vw;
+    text-decoration: rgb(85, 85, 85);
+    font-size: 20px;
 }
-#titletxt{
-    font: bold;
-    color: goldenrod;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 56px;
-    transition: 1s;
-}
-#about1{
+        #titletxt{
+            font: bold;
+            color: goldenrod;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 56px;
+            transition: 0.25s;
+        }
+        #about1{
+            position: absolute;
+            top: 35%;
+            color: goldenrod;
+            padding: 15px;
+            width: 1000px;
+            transition: 0.25s;
+            height: 1250px;
+            z-index: 1;
+            max-width: 50vw;
+        }
+        #about1:hover{
+            color: gold;
+            border-color: gold;
+            transition: 0.25s;
+        }
+        #titletxt:hover{
+            color: gold;
+            transition: 0.25s;
+        }
+        #img{
+            position: absolute;
+            right: 15px;
+            top: 250px;
+        }
+        .text{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            white-space: pre-line;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            hyphens: auto;
+        }
+        .texth1{
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .texty{
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: gold;
+            font-size: 20px;
+        }
+        .textyh1{
+            color: gold;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 36px;
+        }
+        .marqdiv{
+            height: 300px;
+            width: 300px;
+            border: gold 2vw solid;
+            border-radius: 15px;
+            padding: 10px;
+            box-shadow: 5px 5px 20px black;
+        }
+        #marqy{
+            display: flex;
+            gap: 10px;
+        }
+ footer{
+    background-color: grey;
     position: absolute;
-    top: 35%;
-    color: goldenrod;
-    padding: 15px;
-    width: 1000px;
-    transition: 1s;
-    height: 1250px;
-    z-index: 1;
-    max-width: 50vw;
-}
-#about1:hover{
-    color: gold;
-    border-color: gold;
-    transition: 1s;
-}
-#titletxt:hover{
-    color: gold;
-    transition: 1s;
-}
-#img{
-    position: absolute;
-    right: 15px;
-    top: 250px;
-    width: 20vw;
-}
-.text{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    white-space: pre-line;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    hyphens: auto;
-}
-.texth1{
-    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-.texty{
-   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-   color: gold;
-   font-size: 20px;
-}
-.textyh1{
-    color: gold;
-    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 36px;
-}
-.marqdiv{
-    height: 300px;
-    width: 300px;
-    border: gold 2vw solid;
-    border-radius: 15px;
-    padding: 10px;
-}
-#marqy{
-    display: flex;
-    gap: 10px;
+    top: 300%;
+    height: 125px;
+    margin: 0%;
+    width: 99%;
+    text-align: center;
 }
     </style>
 </head>
 <body>
     <nav>
         <ul>
-            <li><img src="Assets/favicon.ico" height="64vw"></li>
+            <li><img src="Assets/favicon.ico" height="75px"></li>
             <a href="index.html"><li class="tab">Home</li></a>
             <a href="about.html"><li class="tab">Sobre</li></a>
             <a href="contact.htm"><li class="tab">Contato</li></a>
@@ -178,31 +192,42 @@ ul{
     <h3 class="text">Entre em contato conosco e descubra como podemos ajudá-lo a proteger seus direitos e alcançar seus objetivos. Estamos prontos para atendê-lo!
     </h3>
     </div>
+    <footer><br><br><br>2024 || Marcelo Goularte Advocacia || OAB/SP 467.249</footer>
     <script>
           const element = document.getElementById('img');
           const textElements = document.getElementsByClassName('text');
           const txth1s = document.getElementsByClassName('textyh1');
+          const tabs = document.getElementsByClassName('tab');
+          function isTablet() {
+            const userAgent = navigator.userAgent.toLowerCase();
+            const isTabletUA = /ipad|android(?!.*mobile)|tablet/.test(userAgent);
+            console.log(isTabletUA) // Matches tablets
+            const isWithinTabletWidth = window.innerWidth >= 600 && window.innerWidth <= 900; // Typical tablet width range
 
-    function adjustElementPosition() {
-        const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-        console.log(isMobile);
-        if (isMobile) {
-            element.style.position = 'absolute';
-            element.style.top = '70px';
-            element.style.left = '100px';
-            
-            // Adjust font size for mobile
-            for (let i = 0; i < textElements.length; i++) {
-                textElements[i].style.fontSize = '20px'; // Allow text to wrap
-            }
-        } else {
-            element.style.top = '250px';
-            element.style.right = '10px';
-            element.style.width = '20vw';
+            return isTabletUA || isWithinTabletWidth;
         }
-    }
 
-    window.onload = adjustElementPosition;
+        function adjustElementPosition() {
+            const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+            console.log(isMobile);
+
+            if (isMobile) {
+                element.style.position = 'absolute';
+                element.style.top = '10px';
+                element.style.left = '250px';
+                if (isTablet) {
+                    element.style.top = '250px';
+                    element.style.right = '10px';
+                    element.style.width = '20vw';
+                }
+            } else {
+                element.style.top = '250px';
+                element.style.right = '10px';
+                element.style.width = '20vw';
+            }
+        }
+
+        window.onload = adjustElementPosition;
     </script>
 </body>
 </html>
