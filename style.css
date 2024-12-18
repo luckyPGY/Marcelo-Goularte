@@ -6,16 +6,22 @@
     height: 55px;
     padding: 10px;
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Montserrat", 'Times New Roman', Times, serif;
     font-size: larger;
     transition: 0.25s;
     display: flex;
     justify-content: space-evenly;
+    max-width: 17.5vw;
+    transform: scale(100%);
+    z-index: 2;
+    animation: navbar 1s;
 }
 .tab:hover{
     background-color: rgb(40, 40, 40);
     color: white;
     transition: 0.25s;
+    transform: scale(115%);
+    z-index: 3;
 }
 nav{
     display: flex;
@@ -36,6 +42,9 @@ ul{
     justify-content: space-evenly;
     text-decoration: rgb(85, 85, 85);
     font-size: 20px;
+}
+ul a{
+    text-decoration: none;
 }
 #titletxt{
     font-size: 5vw;
@@ -58,6 +67,7 @@ footer{
     height: 125px;
     margin: 0%;
     width: 99%;
+    max-width: 99%;
     text-align: center;
 }
 .tit{
@@ -65,15 +75,17 @@ footer{
 }
 @keyframes move{
     0%{
+        opacity: 0;
         position: absolute;
         top: 100%;
-        left: 0%; 
+        transform: translateX(0%);
         font-size: 12px;
     }
     100%{
+        opacity: 1;
         position: absolute;
         top: 25%;
-        left: 15%;
+        transform: translateX(15%);
         font-size: 72px;
     }
 }

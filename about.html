@@ -6,34 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="shortcut icon" href="Assets/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
     <style>
          @font-face {
             font-family: 'Segoe UI';
             src: url("Fonts/Segoe-UI.ttf") format('ttf');
          }
          .tab{
-    text-decoration: rgb(85, 85, 85);
+            text-decoration: rgb(85, 85, 85);
     background-color: rgb(85, 85, 85);
     color: white;
     width: 85px;
     height: 55px;
     padding: 10px;
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Montserrat", 'Times New Roman', Times, serif;
     font-size: larger;
     transition: 0.25s;
     display: flex;
     justify-content: space-evenly;
+    max-width: 17.5vw;
+    transform: scale(100%);
+    z-index: 2;
 }
 .tab:hover{
     background-color: rgb(40, 40, 40);
     color: white;
     transition: 0.25s;
+    z-index: 3;
+    transform: scale(115%);
 }
 nav{
     display: flex;
     justify-content: flex-start;
     text-decoration: rgb(85, 85, 85);
+    animation: navbar 1s;
 }
 body{
     background-image: url(Assets/ground.jpg) /*linear-gradient(black, rgb(40, 40, 40), rgb(68, 68, 68))*/;
@@ -83,23 +95,23 @@ ul{
             top: 250px;
         }
         .text{
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             white-space: pre-line;
             overflow-wrap: break-word;
             word-wrap: break-word;
             hyphens: auto;
         }
         .texth1{
-            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: "Inter", 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
         .texty{
-            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: "Inter", 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             color: gold;
             font-size: 20px;
         }
         .textyh1{
             color: gold;
-            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: "Inter", 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 36px;
         }
         .marqdiv{
@@ -109,6 +121,14 @@ ul{
             border-radius: 15px;
             padding: 10px;
             box-shadow: 5px 5px 20px black;
+            transform: scale(100%);
+            transition: 0.25s;
+            z-index: 1;
+        }
+        .marqdiv:hover{
+            transform: scale(115%);
+            transition: 0.25s;
+            z-index: 2;
         }
         #marqy{
             display: flex;
@@ -122,6 +142,9 @@ ul{
     margin: 0%;
     width: 99%;
     text-align: center;
+}
+ul a{
+    text-decoration: none;
 }
     </style>
 </head>
@@ -192,12 +215,13 @@ ul{
     <h3 class="text">Entre em contato conosco e descubra como podemos ajudá-lo a proteger seus direitos e alcançar seus objetivos. Estamos prontos para atendê-lo!
     </h3>
     </div>
-    <footer><br><br><br>2024 || Marcelo Goularte Advocacia || OAB/SP 467.249</footer>
+    <footer id="footer"><br><br><br>2024 || Marcelo Goularte Advocacia || OAB/SP 467.249</footer>
     <script>
           const element = document.getElementById('img');
           const textElements = document.getElementsByClassName('text');
           const txth1s = document.getElementsByClassName('textyh1');
           const tabs = document.getElementsByClassName('tab');
+          const footer = document.getElementById('footer');
           function isTablet() {
             const userAgent = navigator.userAgent.toLowerCase();
             const isTabletUA = /ipad|android(?!.*mobile)|tablet/.test(userAgent);
@@ -215,15 +239,18 @@ ul{
                 element.style.position = 'absolute';
                 element.style.top = '10px';
                 element.style.left = '250px';
+                footer.style.top = '1000%';
                 if (isTablet) {
                     element.style.top = '250px';
                     element.style.right = '10px';
                     element.style.width = '20vw';
+                    footer.style.top = '300%';
                 }
             } else {
                 element.style.top = '250px';
                 element.style.right = '10px';
                 element.style.width = '20vw';
+                footer.style.top = '300%';
             }
         }
 
