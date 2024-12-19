@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OAB Explanation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    .abbr-menu {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+    }
+    .abbr-title {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #0077cc;
+    }
+    .abbr-item {
+      position: relative;
+      display: inline-block;
+      font-size: 1rem;
+      line-height: 1.6;
+      cursor: help;
+    }
+    .abbr-item .tooltip {
+      display: none;
+      position: absolute;
+      top: 120%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #333;
+      color: #fff;
+      font-size: 0.9rem;
+      padding: 5px 10px;
+      border-radius: 4px;
+      white-space: nowrap;
+      z-index: 10;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .abbr-item:hover .tooltip {
+      display: block;
+    }
+    .abbr-item::after {
+      content: ' ⓘ';
+      font-size: 0.8rem;
+      color: #0077cc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="abbr-menu">
+    <div class="abbr-title">OAB Reference</div>
+    <p>
+      The <span class="abbr-item">OAB
+        <span class="tooltip">Ordem dos Advogados do Brasil</span>
+    </p>
+  </div>
+
+</body>
+</html>
