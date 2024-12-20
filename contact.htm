@@ -91,6 +91,8 @@ ul{
                 color: black;
                 width: 100px;
                 height: 15px;
+                padding: 2px;
+                font-family: "Montserrat", serif;
             }
             #Submitter{
                 background-color: dodgerblue;
@@ -102,6 +104,7 @@ ul{
                 transition: 0.25s;
                 border: solid 2px black;
                 transform: scale(100%);
+                box-shadow: 5px 5px 20px black;
             }
             #Submitter:hover{
                 background-color: rgb(170, 207, 255);
@@ -126,6 +129,9 @@ footer{
     margin: 0%;
     width: 99%;
     text-align: center;
+}
+label{
+    font-family: "Montserrat", serif;
 }
             @keyframes move{
             0%{
@@ -157,16 +163,16 @@ footer{
     <form id="form">
         <h1>Enviar mensagem</h1>
         <label id="lab2" for="int2" class="label">Nome Completo:</label>
-        <input id="int2" type="text" required><br><br>
+        <input id="int2" type="text" placeholder="Nome" required><br><br>
 
         <label id="lab1" for="int1" class="label">Telefone:</label>
-        <input id="int1" type="tel"><br><br>
+        <input id="int1" type="tel" placeholder="Telefone"><br><br>
 
         <label id="lab3" for="int3" class="label">Assunto:</label>
-        <input id="int3" type="text"><br><br>
+        <input id="int3" type="text" placeholder="Assunto"><br><br>
 
         <label id="lab4" for="int4" class="label">Mensagem:</label>
-        <input id="int4" type="text" required><br><br>
+        <input id="int4" type="text" required placeholder="Mensagem"><br><br>
 
         <button type="submit" id="Submitter">Enviar</button>
     </form>

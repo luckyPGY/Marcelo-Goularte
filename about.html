@@ -93,6 +93,12 @@ ul{
             position: absolute;
             right: 15px;
             top: 250px;
+            transform: rotateX(0);
+            transition: 0.25s;
+        }
+        #img:hover{
+            transform: rotateX(45);
+            transition: 0.25s;
         }
         .text{
             font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -137,7 +143,7 @@ ul{
  #footer{
     background-color: grey;
     position: absolute;
-    top: 1200px;
+    top: 2000px;
     height: 125px;
     margin: 0%;
     width: 99%;
@@ -239,7 +245,6 @@ ul a{
                 element.style.position = 'absolute';
                 element.style.top = '10px';
                 element.style.left = '290px';
-                footer.style.top = '1200px';
                 if (isTablet) {
                     element.style.top = '250px';
                     element.style.right = '10px';
@@ -256,6 +261,7 @@ ul a{
 
         window.onload = adjustElementPosition;
     </script>
+    <script src="domain.js"></script>
 </body>
 </html>
 <!-- Código feito por Pedro Goularte -->
