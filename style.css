@@ -54,11 +54,17 @@ ul a{
     position: absolute;
     top: 25%;
     transform: translateX(15%);
+    transition: 0.25s;
     color: goldenrod;
     font-family: "Montserrat", system-ui, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     animation-name: move;
     animation-duration: 1s;
     text-shadow: 0px 5px 20px black;
+}
+#titlescreen:hover{
+    scale: 120%;
+    transition: 0.25;
+    text-shadow: 0px 5px 25px black;
 }
 footer{
     background-color: grey;
