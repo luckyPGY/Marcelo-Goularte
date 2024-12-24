@@ -153,6 +153,17 @@ ul{
 ul a{
     text-decoration: none;
 }
+footer{
+    background-color: grey;
+    position: absolute;
+    color: black;
+    top: 330vh;
+    height: 125px;
+    margin: 0%;
+    width: 100vw;
+    max-width: 100vw;
+    text-align: center;
+}
     </style>
 </head>
 <body>
@@ -221,6 +232,7 @@ ul a{
     <br>
     <h3 class="text">Entre em contato conosco e descubra como podemos ajudá-lo a proteger seus direitos e alcançar seus objetivos. Estamos prontos para atendê-lo!
     </h3>
+    <footer id="footer"><br><br><br>2024 || Marcelo Goularte Advocacia || OAB/SP 467.249</footer>
     </div>
     <script>
           const element = document.getElementById('img');
@@ -231,7 +243,7 @@ ul a{
           function isTablet() {
             const userAgent = navigator.userAgent.toLowerCase();
             const isTabletUA = /ipad|android(?!.*mobile)|tablet/.test(userAgent);
-            console.log(isTabletUA) // Matches tablets
+            console.log(isTabletUA); // Matches tablets
             const isWithinTabletWidth = window.innerWidth >= 600 && window.innerWidth <= 900; // Typical tablet width range
 
             return isTabletUA || isWithinTabletWidth;
@@ -245,17 +257,17 @@ ul a{
                 element.style.position = 'absolute';
                 element.style.top = '10px';
                 element.style.left = '290px';
+                footer.style.top = '330vh'
                 if (isTablet) {
                     element.style.top = '250px';
                     element.style.right = '10px';
                     element.style.width = '20vw';
-                    footer.style.top = '300%';
                 }
             } else {
                 element.style.top = '250px';
                 element.style.right = '10px';
                 element.style.width = '20vw';
-                footer.style.top = '300%';
+                footer.style.top = '230vh';
             }
         }
 

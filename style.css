@@ -14,7 +14,6 @@
     max-width: 17.5vw;
     transform: scale(100%);
     z-index: 2;
-    animation: navbar 1s;
 }
 .tab:hover{
     background-color: rgb(40, 40, 40);
@@ -39,9 +38,9 @@ ul{
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: space-evenly;
     text-decoration: rgb(85, 85, 85);
     font-size: 20px;
+    animation: navbar 1s ease-in-out forwards;
 }
 ul a{
     text-decoration: none;
@@ -93,5 +92,13 @@ footer{
         top: 25%;
         transform: translateX(15%);
         font-size: 72px;
+    }
+}
+@keyframes navbar{
+    0%{
+        justify-content: flex-end;
+    }
+    100%{
+        justify-content: flex-start;
     }
 }
