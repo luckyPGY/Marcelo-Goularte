@@ -6,5 +6,5 @@
   <hr>
   <span style="color: red; background-color: black;">Recomendado ativar o modo computador em tablets</span>
   <hr>
-  <h4 style="font-family: serif;">Marcelo Goularte Advocacia || OAB/SP 467.249 || 2024</h4>
+  <h4 style="font-family: serif;">2025 || Marcelo Goularte Advocacia || OAB/SP 467.249</h4>
 </Body>
