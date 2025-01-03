@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcelo Goularte Advocacia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Assets/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><img src="Assets/favicon.ico" height="75px"></li>
+            <a href="index.html"><li class="tab">Home</li></a>
+            <a href="about.html"><li class="tab">Sobre</li></a>
+            <a href="contact.htm"><li class="tab">Contato</li></a>
+        </ul>
+    </nav>
+    <div id="titlescreen">
+        <h1 id="titletxt">Marcelo Goularte Advocacia</h1>
+        <h2 class="tit">Advogado de qualidade</h2>
+    </div>
+    <footer><br><br><br>2024 || Marcelo Goularte Advocacia || OAB/SP 467.249</footer>
+    <script>
+         function isTablet() {
+          const userAgent = navigator.userAgent.toLowerCase();
+          const isTabletUA = /ipad|android(?!.*mobile)|tablet/.test(userAgent); // Matches tablets
+          const isWithinTabletWidth = window.innerWidth >= 600 && window.innerWidth <= 900; // Typical tablet width range
+
+          return isTabletUA || isWithinTabletWidth;
+      }
+      function adjustElementPosition() {
+          const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+          console.log(isMobile);
+
+          if (isMobile) {
+
+              if (isTablet) {
+
+              }
+          } else {
+
+          }
+      }
+
+      window.onload = adjustElementPosition;
+  </script>
+      <script src="Settings/domain.js"></script>
+</body>
+</html>
+<!-- Código feito por Pedro Goularte -->
